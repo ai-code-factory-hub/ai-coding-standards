@@ -10,7 +10,7 @@ HOW TO USE
 - Always run PLAN (Step 4) before any build. Never jump from docs to "build it."
 
 VARIABLE LEGEND (replace these)
-- [PROJECT_NAME]         e.g. MargLab
+- [PROJECT_NAME]         e.g. Acme
 - [DOMAIN]               e.g. cloud multi-tenant Laboratory Information System for Indian labs
 - [REQUIREMENT_DOC]      the PRD / functional spec filename(s)
 - [STANDARDS_DOC]        the engineering-standards / NFR handbook filename

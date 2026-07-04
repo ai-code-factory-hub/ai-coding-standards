@@ -76,8 +76,7 @@ inherit the relevant standards. Every file cross-links the standards domain(s) t
 
 ## Re-skinning the design system
 
-`design-system-kb/` ships a **brand-neutral placeholder palette** plus the full **Marg /
-MargHR token set** included as a ready default. To re-brand: change the primitive color +
+`design-system-kb/` ships a **brand-neutral placeholder palette** plus the full **Indigo token set** included as a ready default. To re-brand: change the primitive color +
 font tokens only; every component inherits through semantic tokens. See
 `design-system-kb/01-design-tokens.md`.
 

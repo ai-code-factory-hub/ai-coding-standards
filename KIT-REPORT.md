@@ -17,7 +17,7 @@ still worth adding later. Compiled 2026-07-05. **163 files · 1,557 internal cro
 | `compliance-kb/` | 9 | privacy (GDPR, DPDP, CCPA) · attestations (SOC2, ISO 27001, PCI-DSS) · sector (HIPAA) · controls matrix |
 | `events-kb/` | 7 | Event-driven / async patterns: messaging fundamentals, outbox/inbox, idempotent consumers, saga/orchestration, event schema/versioning, eventing ops |
 | `feature-blueprints/` | 15 | Buildable feature specs incl. **workflow & approval engine** (see below) |
-| `design-system-kb/` | 4 | Brand-neutral tokens + Marg skin, theming, components/a11y |
+| `design-system-kb/` | 4 | Brand-neutral tokens + Indigo skin, theming, components/a11y |
 | `component-library-kb/` | 6 | Component catalog (36 components) + React/Tailwind recipes built from the tokens |
 | `sre-kb/` | 14 | On-call: incident response, SLOs/error budgets, escalation, postmortem + 8 runbooks |
 | `threat-models/` | 10 | STRIDE method + template + 8 per-feature threat models (auth, upload, API, payment, AI…) |

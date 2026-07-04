@@ -1,26 +1,26 @@
 # Design System KB — Index & Unbreakable Rules
 
-Purpose: a brand-neutral, re-skinnable design system any project can adopt on day one — with a complete, ready-made "Marg" skin included as the default.
+Purpose: a brand-neutral, re-skinnable design system any project can adopt on day one — with a complete, ready-made "Indigo" skin included as the default.
 
 ## What this KB is
 
-A **token-driven** design system built so that changing the brand is a *data* change, not a *code* change. Every project starts from a neutral placeholder palette; swapping in your own brand (or the included Marg skin) means replacing **one block of primitive tokens** — everything else inherits.
+A **token-driven** design system built so that changing the brand is a *data* change, not a *code* change. Every project starts from a neutral placeholder palette; swapping in your own brand (or the included Indigo skin) means replacing **one block of primitive tokens** — everything else inherits.
 
 - Components consume **semantic/component tokens only**, never raw hex.
 - A theme is a **JSON token set**; switching themes = swapping the set.
-- The neutral palette here is the **placeholder default**; the **Marg** token set (Indigo/Saffron/Slate, Inter + Noto Indic) is an **included ready skin** you can swap in wholesale.
+- The neutral palette here is the **placeholder default**; the **Indigo** token set (Indigo/Saffron/Slate, Inter + Noto Indic) is an **included ready skin** you can swap in wholesale.
 
 ## Files in this KB
 
 | File | Covers |
 |---|---|
-| [`01-design-tokens.md`](01-design-tokens.md) | Three-tier token architecture, neutral placeholder palette, type scale, weights, spacing, radius, shadow, motion — plus the included **Marg** default skin |
+| [`01-design-tokens.md`](01-design-tokens.md) | Three-tier token architecture, neutral placeholder palette, type scale, weights, spacing, radius, shadow, motion — plus the included **Indigo** default skin |
 | [`02-theming-and-modes.md`](02-theming-and-modes.md) | Light/dark/follow-system, theme catalog concept (≥12), dark-mode lifting, system→tenant→user override, user-definable colors, white-label across app/PDF/email |
 | [`03-components-and-a11y.md`](03-components-and-a11y.md) | Component recipes (buttons, cards, badges, inputs, avatars), tabular numerals, locale formatting, WCAG 2.2 AA rules, Do/Don't |
 
 ## The unbreakable rules
 
-These are brand-independent. They hold for the neutral default, the Marg skin, and any skin you author.
+These are brand-independent. They hold for the neutral default, the Indigo skin, and any skin you author.
 
 1. **Brand color only on primary CTAs, active states, and AI features.** One primary action per screen. [MUST]
 2. **Accent color only on celebratory / warmth moments** (highlights, scores, avatars, recognition, low-literacy affordances) — **max ~5% of any screen.** [MUST]
@@ -55,6 +55,6 @@ font-sans  = Inter     →    --font-body         →    --button-font
 - [ ] At least one high-contrast (AAA-targeting) and one colorblind-safe theme available.
 - [ ] Fonts include the scripts your users actually read.
 
-## Included default skin — "Marg"
+## Included reference skin (Indigo)
 
-The Marg skin (Indigo 600 `#4F46E5` primary, Saffron `#EA580C` accent, Slate neutrals, Emerald/Amber/Red/Blue semantics, Inter + Noto Indic + JetBrains Mono) is reproduced verbatim as a swap-in-ready set in [`01-design-tokens.md`](01-design-tokens.md#included-default-skin--marg-tokens-from-marghr_design_tokens), with a 16-theme catalog in [`02-theming-and-modes.md`](02-theming-and-modes.md). Use it as-is, or use it as a worked example of a complete skin.
+The Indigo skin (Indigo 600 `#4F46E5` primary, Saffron `#EA580C` accent, Slate neutrals, Emerald/Amber/Red/Blue semantics, Inter + Noto Indic + JetBrains Mono) is reproduced verbatim as a swap-in-ready set in [`01-design-tokens.md`](01-design-tokens.md#included-reference-skin-indigo), with a 16-theme catalog in [`02-theming-and-modes.md`](02-theming-and-modes.md). Use it as-is, or use it as a worked example of a complete skin.

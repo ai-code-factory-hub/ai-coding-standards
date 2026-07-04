@@ -1,6 +1,6 @@
 # Design Tokens
 
-Purpose: define the three-tier token architecture and the full default token set — a brand-neutral placeholder palette first, then the included **Marg** skin as a swap-in-ready alternative.
+Purpose: define the three-tier token architecture and the full default token set — a brand-neutral placeholder palette first, then the included **Indigo** skin as a swap-in-ready alternative.
 
 ## Token architecture (mandatory)
 
@@ -150,23 +150,23 @@ Components reference these, never the primitives above.
 
 ---
 
-## Included default skin — "Marg" tokens (from MargHR_Design_Tokens)
+## Included reference skin (Indigo)
 
-> This is the **included ready skin**, reproduced verbatim from `Standards/MargHR_Design_Tokens.docx`. The neutral palette above is the placeholder; **Marg is a complete example skin**. To adopt it, replace the primitive blocks above with the ones below — **nothing else changes**, because semantic and component tokens are unaffected.
+> This is the **included ready skin**, reproduced verbatim as a worked example set. The neutral palette above is the placeholder; **Indigo is a complete example skin**. To adopt it, replace the primitive blocks above with the ones below — **nothing else changes**, because semantic and component tokens are unaffected.
 
-### Marg primitive: Primary — Indigo
+### Indigo primitive: Primary — Indigo
 
 `50 #EEF2FF · 100 #E0E7FF · 200 #C7D2FE · 300 #A5B4FC · 400 #818CF8 · 500 #6366F1 ·` **`600 #4F46E5 ★ PRIMARY`** `· 700 #4338CA · 800 #3730A3 · 900 #312E81 · 950 #1E1B4B`
 
 **Dark mode:** primary lifts to **`400 #818CF8`** (600 fails AA on near-black); `950` for AI insight card backgrounds.
 
-### Marg primitive: Accent — Saffron/Orange
+### Indigo primitive: Accent — Saffron/Orange
 
 `50 #FFF7ED · 100 #FFEDD5 · 200 #FED7AA · 400 #FB923C ·` **`600 #EA580C ★ ACCENT`** `· 700 #C2410C · 950 #431407`
 
 **Dark:** accent lifts to **`400 #FB923C`**. Use sparingly (rule 2).
 
-### Marg primitive: Semantic — fixed meaning (identical to defaults)
+### Indigo primitive: Semantic — fixed meaning (identical to defaults)
 
 | Role | Light | Dark (lifted) | Light bg / Dark bg |
 |---|---|---|---|
@@ -175,12 +175,12 @@ Components reference these, never the primitives above.
 | **Danger** — Red | `#EF4444` | `#F87171` | `#FEF2F2` / `#450A0A` |
 | **Info** — Blue | `#3B82F6` | `#60A5FA` | `#EFF6FF` / `#172554` |
 
-### Marg primitive: Neutral — Slate (60% of every screen)
+### Indigo primitive: Neutral — Slate (60% of every screen)
 
 Light: bg `#FFFFFF`, page `slate-50 #F8FAFC`, surface `slate-100`, border `slate-200 #E2E8F0`, body text `slate-900 #0F172A`.
 Dark: page `slate-950 #020617`, card `slate-900`, border `slate-800`, body text `slate-100 #F1F5F9`.
 
-### Marg primitive: Fonts
+### Indigo primitive: Fonts
 
 | Token | Font |
 |---|---|
@@ -189,6 +189,6 @@ Dark: page `slate-950 #020617`, card `slate-900`, border `slate-800`, body text 
 | `font-mono` | JetBrains Mono (IDs, barcodes, LOINC/SNOMED codes, hex) |
 | `font-hindi / tamil / telugu / bengali` | Noto Sans (per script) — auto-fallback from Inter |
 
-> Verified Marg contrast pairs: slate-900 on white 18.7:1 (AAA), slate-500 on white 4.85:1 (AA), indigo-600 on white 7.0:1 (AAA), white on accent-600 4.65:1 (AA); dark: slate-100 on slate-950 17.5:1, indigo-400 on slate-950 5.95:1.
+> Verified Indigo contrast pairs: slate-900 on white 18.7:1 (AAA), slate-500 on white 4.85:1 (AA), indigo-600 on white 7.0:1 (AAA), white on accent-600 4.65:1 (AA); dark: slate-100 on slate-950 17.5:1, indigo-400 on slate-950 5.95:1.
 
 See [`02-theming-and-modes.md`](02-theming-and-modes.md) for the 16-theme catalog built on this skin, and [`03-components-and-a11y.md`](03-components-and-a11y.md) for component recipes.

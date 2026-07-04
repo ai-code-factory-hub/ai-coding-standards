@@ -1,6 +1,6 @@
 # Theming & Modes
 
-Purpose: define the generic theming *mechanism* — light/dark/follow-system, a multi-theme catalog, dark-mode lifting, the system→tenant→user override chain, user-definable colors with guardrails, and white-label across channels. The Marg catalog appears as a worked example.
+Purpose: define the generic theming *mechanism* — light/dark/follow-system, a multi-theme catalog, dark-mode lifting, the system→tenant→user override chain, user-definable colors with guardrails, and white-label across channels. The Indigo catalog appears as a worked example.
 
 > Requirements reference: [`../standards-kb/18-theming-branding.md`](../standards-kb/18-theming-branding.md) (the [MUST] theming rules) and [`../standards-kb/13-i18n-accessibility.md`](../standards-kb/13-i18n-accessibility.md) (contrast + a11y).
 
@@ -54,14 +54,14 @@ system default ──► tenant branding (may lock) ──► user preference (w
 
 ---
 
-## Example theme catalog (Marg default skin)
+## Example theme catalog (Indigo default skin)
 
-> Illustrates the mechanism above with the included **Marg** skin. **Primary (light)** is the 600-step; **Primary (dark)** is the lifted 400-step. **Semantic colors stay fixed** (emerald/amber/red/blue) in all themes except *High Contrast* and *Colorblind-Safe*, which tune them for accessibility. Accent stays Saffron across themes (a brand constant) unless noted. Any other skin builds its own catalog the same way.
+> Illustrates the mechanism above with the included **Indigo** skin. **Primary (light)** is the 600-step; **Primary (dark)** is the lifted 400-step. **Semantic colors stay fixed** (emerald/amber/red/blue) in all themes except *High Contrast* and *Colorblind-Safe*, which tune them for accessibility. Accent stays Saffron across themes (a brand constant) unless noted. Any other skin builds its own catalog the same way.
 
 | # | Theme | Character | Primary (light) | Primary (dark) | Accent | Notes |
 |---|---|---|---|---|---|---|
-| 1 | **Marg Indigo** ★ default | Brand default | `#4F46E5` | `#818CF8` | Saffron `#EA580C` | The system default |
-| 2 | **Marg Saffron** | Brand-forward, warm | `#EA580C` | `#FB923C` | Indigo `#4F46E5` | Accent/primary swapped |
+| 1 | **Indigo** ★ default | Brand default | `#4F46E5` | `#818CF8` | Saffron `#EA580C` | The system default |
+| 2 | **Saffron** | Brand-forward, warm | `#EA580C` | `#FB923C` | Indigo `#4F46E5` | Accent/primary swapped |
 | 3 | **Clinical Teal** | Calm, medical | `#0D9488` | `#2DD4BF` | Saffron | Popular for diagnostics |
 | 4 | **Medical Blue** | Trust, classic | `#2563EB` | `#60A5FA` | Saffron | Info-blue stays distinct (blue-500) |
 | 5 | **Emerald Care** | Fresh, wellness | `#059669` | `#34D399` | Saffron | Success stays emerald + icon (avoid clash) |
@@ -77,4 +77,4 @@ system default ──► tenant branding (may lock) ──► user preference (w
 | 15 | **High Contrast** ♿ | Accessibility (AAA) | `#1D4ED8` on `#FFFFFF` | `#93C5FD` on `#000000` | `#B45309` | Strong 3px borders, AAA text targets |
 | 16 | **Colorblind-Safe** ♿ | Okabe-Ito palette | `#0072B2` (blue) | `#56B4E9` | `#E69F00` (orange) | Semantic: success `#009E73`, danger `#D55E00`, warning `#F0E442` (dark text), info `#56B4E9`; always icon+label |
 
-This catalog satisfies the ≥12 / high-contrast / colorblind-safe requirements above (Marg ships 16). Cross-check the [MUST] rules in [`../standards-kb/18-theming-branding.md`](../standards-kb/18-theming-branding.md).
+This catalog satisfies the ≥12 / high-contrast / colorblind-safe requirements above (Indigo ships 16). Cross-check the [MUST] rules in [`../standards-kb/18-theming-branding.md`](../standards-kb/18-theming-branding.md).
