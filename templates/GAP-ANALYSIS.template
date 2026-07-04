@@ -1,0 +1,63 @@
+# [PROJECT_NAME] — Requirements Digest & Gap Analysis
+
+<!--
+HOW TO USE: Copy to `knowledge-base/REQUIREMENTS-DIGEST-AND-GAPS.md`. Produced by reading every
+source document and recording (A) what they DO define, and (B–D) what they DON'T. This is the
+single most important pre-build doc: read it before every slice. Promote Part-E items into
+`../DECISIONS.md` → Open Questions as each module comes up. Fill each [BRACKET].
+-->
+
+> The honest map of what the requirements settle and what they leave open. Read before every slice.
+> Compiled [YYYY-MM-DD] from the source documents listed in `README.md`.
+
+---
+
+## Part A — What the documents DO define (coverage)
+_The requirements that are clear and buildable as-is._
+
+| # | Area / module | What is specified | Source doc | Buildable now? |
+|---|---|---|---|---|
+| A1 | [AREA] | [what the docs pin down] | [SOURCE] | [yes / needs decision] |
+| A2 | [...] | [...] | [...] | [...] |
+
+## Part B — Cross-document inconsistencies (conflicts)
+_Where two source documents disagree. Each needs a single reconciling decision._
+
+| # | Topic | Doc X says | Doc Y says | Impact | Resolution owner |
+|---|---|---|---|---|---|
+| B1 | [TOPIC] | [claim in doc X] | [conflicting claim in doc Y] | [what breaks if unresolved] | [owner] |
+| B2 | [...] | [...] | [...] | [...] | [...] |
+
+## Part C — Modules described but NOT screen-specified
+_Named in scope, but no screen/flow detail exists yet — will need spec work before build._
+
+| # | Module | Described where | What's missing | Blocks which phase |
+|---|---|---|---|---|
+| C1 | [MODULE] | [SOURCE] | [no screens / no fields / no flow] | [P?] |
+| C2 | [...] | [...] | [...] | [...] |
+
+## Part D — Logic named but NOT defined
+_A rule, calculation, or state machine is referenced by name but its actual behaviour is undefined._
+
+| # | Named logic | Where referenced | What's undefined | Needed for |
+|---|---|---|---|---|
+| D1 | [e.g. pricing rule / commission calc / status transition] | [SOURCE] | [inputs, formula, edge cases] | [MODULE] |
+| D2 | [...] | [...] | [...] | [...] |
+
+---
+
+## Part E — Decisions only the owner can make
+_Product/[DOMAIN]/commercial calls that no default can settle. Each is promoted to
+`../DECISIONS.md` → Open Questions before the slice that needs it._
+
+- [ ] [OWNER_DECISION_1] — needed for [MODULE_OR_SLICE].
+- [ ] [OWNER_DECISION_2] — needed for [MODULE_OR_SLICE].
+- [ ] [OWNER_DECISION_3] — needed for [MODULE_OR_SLICE].
+
+## Priority signals (build order)
+_What the sources imply about sequencing — feeds the phase order in `../DELIVERY-PLAN.md`._
+
+| Signal | Modules affected | Implication |
+|---|---|---|
+| [Foundational — needed first] | [M?] | [build before anything clinical/commercial] |
+| [...] | [...] | [...] |

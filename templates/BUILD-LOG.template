@@ -1,0 +1,39 @@
+# [PROJECT_NAME] — Build Log (autonomous runs)
+
+<!--
+HOW TO USE: Copy to the repo root as `BUILD-LOG.md`. Append one entry per autonomous build session
+(newest at the top). This is the running record of what got built without supervision, which
+assumptions to revisit, and what the owner should review. Reversible defaults also go in
+`DECISIONS.md` → Assumptions; this log is the session-by-session narrative.
+-->
+
+> Append-only, newest first. One entry per autonomous build session. Keeps the owner able to review
+> asynchronously: what was built, what was assumed, what needs eyes, and what comes next.
+
+---
+
+## Session [YYYY-MM-DD] — [PHASE / MODULE focus]
+
+**Slices built**
+- [SLICE_1 — module/screen + one line on what now works]
+- [SLICE_2 — ...]
+
+**Assumptions taken (revisit)**
+_Reversible defaults chosen to keep moving. Also logged in `DECISIONS.md` → Assumptions._
+- [ASSUMPTION_1 — what + why] → revisit before [MILESTONE/never].
+- [ASSUMPTION_2 — ...]
+
+**What needs owner review**
+- [ ] [DECISION_OR_DIFF needing sign-off — link PR/commit]
+- [ ] [OPEN_QUESTION that blocks the next slice — promoted to `DECISIONS.md`? y/n]
+
+**Verification run**
+- [Tests / `verify` result, or what still needs proving.]
+- Definition of Done met? [yes / partial — see `DEFINITION-OF-DONE.md`]
+
+**Next best slice**
+- [The single most valuable next slice, and why it's next per `DELIVERY-PLAN.md`.]
+
+---
+
+<!-- Copy the block above for each new session. Newest at the top. -->

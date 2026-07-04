@@ -1,0 +1,30 @@
+# [PROJECT_NAME] — ADR-[NNN]: [SHORT_DECISION_TITLE]
+
+<!--
+HOW TO USE: Copy for a decision important enough to warrant a standalone record (the terse one-line
+form lives in `DECISIONS.md`). One ADR per file, named e.g. `docs/adr/ADR-[NNN]-[slug].md`, or paste
+the block into `DECISIONS.md`. ADRs are immutable once ACCEPTED — supersede, don't edit.
+-->
+
+- **ID:** ADR-[NNN]
+- **Date:** [YYYY-MM-DD]
+- **Status:** [PROPOSED | ACCEPTED | LOCKED | DEPRECATED | SUPERSEDED by ADR-NNN]
+- **Deciders:** [WHO]
+
+## Context
+[The forces at play: the problem, constraints, requirements (link the `knowledge-base/` doc), and
+relevant standards (link the `../standards-kb/` domain). Why a decision is needed *now*.]
+
+## Decision
+[The choice, stated in one clear sentence, then the specifics. "We will [X]."]
+
+## Consequences
+- **Positive:** [what this makes easier / safer / faster.]
+- **Negative / trade-offs:** [what this makes harder or costs us; debt accepted.]
+- **Follow-ups:** [migrations, docs, or tickets this creates.]
+
+## Alternatives considered
+| Option | Pros | Cons | Why not chosen |
+|---|---|---|---|
+| [ALTERNATIVE_1] | [pros] | [cons] | [reason rejected] |
+| [ALTERNATIVE_2] | [pros] | [cons] | [reason rejected] |

@@ -1,0 +1,43 @@
+# [PROJECT_NAME] — Requirements Knowledge Base (index)
+
+<!--
+HOW TO USE: Copy to `knowledge-base/README.md`. This is the index for the project's REQUIREMENTS KB
+(the WHAT/WHY). It is built by ingesting your source documents. Engineering standards (HOW WELL) live
+in `../standards-kb/`; design tokens (HOW IT LOOKS) in `../design-system-kb/`.
+Fill each [BRACKET]; add one navigation row per KB doc you create.
+-->
+
+## One-paragraph mental model
+[Write the whole product in one paragraph a new engineer can hold in their head: what it is, who
+uses it ([PERSONAS]), the core object flow ([e.g. A → B → C → outcome]), the [DOMAIN]/compliance
+regime, and the single differentiator. This is the map everything else hangs off.]
+
+## Source documents (what this KB was built from)
+| # | Source document | Type | Covers | Ingested |
+|---|---|---|---|---|
+| 1 | [SOURCE_DOC_NAME] | [PRD / FSpec / design / spreadsheet] | [what it defines] | [YYYY-MM-DD] |
+| 2 | [SOURCE_DOC_NAME] | [...] | [...] | [...] |
+| [n] | [...] | [...] | [...] | [...] |
+
+## Navigation (the KB docs)
+| Doc | Owns | Read when |
+|---|---|---|
+| [01-personas-and-roles.md] | [who the users are, RBAC roles] | [scoping auth / any screen] |
+| [02-domain-model.md] | [core entities + relationships] | [designing schema] |
+| [03-modules.md] | [the module catalogue M1..M[n]] | [scoping any slice] |
+| [04-state-machines.md] | [lifecycle states + transitions] | [building workflow logic] |
+| [05-screens.md] | [screen-by-screen specs] | [building any UI] |
+| [...] | [...] | [...] |
+| REQUIREMENTS-DIGEST-AND-GAPS.md | [priority signals + everything undecided] | **[first, and before every slice]** |
+
+## Where the gaps and open decisions live
+Everything the source docs **do not** settle — cross-document conflicts, modules without screens,
+logic named but not defined, and decisions only the owner can make — is captured in
+**[REQUIREMENTS-DIGEST-AND-GAPS.md](REQUIREMENTS-DIGEST-AND-GAPS.md)** (produced with `GAP-ANALYSIS.template`).
+Open questions from it are promoted into `../DECISIONS.md` as each module comes up. Read the digest
+before starting any slice.
+
+## The three inputs (why nothing falls through)
+- **Requirements (this KB)** = WHAT to build.
+- **Standards (`../standards-kb/`)** = HOW WELL — obeyed for all NFRs.
+- **Design tokens (`../design-system-kb/`)** = HOW IT LOOKS — obeyed for all UI.

@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Temp Office lock files
+~$*
+
+# Local archives
+*.zip

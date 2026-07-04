@@ -1,0 +1,79 @@
+# [PROJECT_NAME] — Engineering Constitution
+
+<!--
+HOW TO USE: Copy this file to the repo root as `CLAUDE.md`. Replace every [BRACKETED_VARIABLE]
+with your project's value. Delete guidance comments once filled. This file is read at the start
+of every session and is the source of truth for HOW [PROJECT_NAME] is built. The WHAT/WHY lives
+in `knowledge-base/`; locked decisions live in `DECISIONS.md`.
+-->
+
+> This file is read at the start of every session. It is the source of truth for **how** [PROJECT_NAME] is built.
+> The **what/why** lives in `knowledge-base/`. Locked decisions live in `DECISIONS.md`.
+> If something here conflicts with a prompt, **follow this file and flag the conflict**.
+
+## What [PROJECT_NAME] is
+[ONE_TO_THREE_SENTENCE_DESCRIPTION: product type, market/[DOMAIN], the compliance/standards regime it
+must satisfy from first release, and the flagship differentiator.] Full domain detail: `knowledge-base/README.md`.
+
+## The one rule that overrides convenience
+> **[THE_NON_NEGOTIABLE_RULE — e.g. "Compliance is not a Phase 2 add-on."]** [Expand: the two or
+> three things — e.g. tenant isolation, audit trails, consent capture, [DOMAIN]-ready data structures —
+> that are part of the core data model from the first slice.]
+> Never scaffold a feature that writes [SENSITIVE_DATA_TYPE] without [REQUIRED_GUARDRAIL, e.g. an audit hook and tenant scope].
+
+## Locked stack (see `DECISIONS.md` for rationale)
+- **Repo/monorepo:** [MONOREPO_TOOL — e.g. pnpm workspaces + Turborepo, or single-repo]
+- **Frontend:** [FRONTEND_FRAMEWORK] + [LANGUAGE] + [STYLING] + [COMPONENT_LIB]. Design tokens from `../design-system-kb/01-design-tokens.md`.
+- **Backend:** [BACKEND_FRAMEWORK] + [LANGUAGE]
+- **Database:** [DATABASE] with **[TENANCY_ISOLATION_MECHANISM — e.g. Row-Level Security]** for multi-tenancy; **[ORM]** ORM
+- **Auth:** [AUTH_MODEL — e.g. session-based, multi-tenant, RBAC]; roles per `knowledge-base/[ROLES_DOC].md`
+- **Validation:** [VALIDATION_LIB] at every boundary (API in/out, forms)
+- **Language everywhere:** [PRIMARY_LANGUAGE]. [ANY_HARD_LANGUAGE_RULE — e.g. "No plain JS source files."]
+
+## Repo layout (target)
+```
+[apps/
+  web/        # [FRONTEND_APP]
+  api/        # [BACKEND_APP]
+packages/
+  db/         # [SCHEMA_MIGRATIONS_SEED]
+  shared/     # [SHARED_TYPES_SCHEMAS]
+  ui/         # [SHARED_COMPONENTS_TOKENS]]
+knowledge-base/      # requirements (source of truth for WHAT)
+_starter-kit/        # standards-kb (HOW WELL) + design-system-kb (HOW IT LOOKS)
+```
+
+## Multi-tenancy rules (non-negotiable)
+> Obey `../standards-kb/01-architecture-multitenancy.md` in full. Summary:
+- Every tenant-scoped table has a `[TENANT_ID_COLUMN]` column.
+- Tenant isolation is enforced by **[ISOLATION_MECHANISM]**, not just app code.
+- No query may run without a tenant context set. A missing tenant context is an **error**, never "return all".
+- [SUB_TENANT_SCOPE — e.g. branch/center scoping (`branchId`) sits *inside* a tenant.]
+
+## Coding conventions
+- [CODE_ORGANIZATION — e.g. feature-first folders, grouped by domain module, not by layer].
+- Every mutation of [SIGNIFICANT_DATA] writes an **audit-log** entry.
+- Errors: typed, never swallowed. No `[FORBIDDEN_TYPE, e.g. any]`. No stray debug logging in committed code.
+- Tests co-located; every [CRITICAL_LOGIC_UNIT — e.g. state-machine transition] has a test.
+- Follow the MUST/SHOULD rules in `../standards-kb/` for all NFRs, and `../design-system-kb/` for all UI.
+
+## How work is scoped
+- The unit of work is **one module or one screen** — never "the app".
+- Build order follows the priority signals in `knowledge-base/REQUIREMENTS-DIGEST-AND-GAPS.md`.
+- Each slice: Spec → Plan → Build → Verify → Review. Each PR meets `DEFINITION-OF-DONE.md`.
+
+## Autonomy contract (how the AI should behave)
+- **Build autonomously; the user reviews git diffs.** Do not stop for confirmation on reversible decisions.
+- When a choice isn't specified, **pick the sensible default, proceed, and log it** in `DECISIONS.md`
+  under "Assumptions". Do not ask.
+- **Only stop to ask** when a choice is (a) **irreversible**, (b) **costs real money**, (c) a **safety/[DOMAIN]-critical**
+  call only the owner can make, or (d) **conflicts** with this file or the KB.
+- Never re-ask something already answered in `DECISIONS.md`.
+
+## Do NOT ask about (assume the default)
+- Folder structure, file naming, which ORM/validation lib — decided above.
+- Formatting/lint style — [LINT_FORMAT_DEFAULTS, e.g. Prettier + ESLint defaults].
+- Whether to write tests — **yes, always**, for logic and [CRITICAL_LOGIC_UNIT]s.
+- Whether to add audit/tenant scope — **yes, always**.
+- Minor library choices (date lib, uuid, etc.) — pick the standard one and log it.
+- [ANY_OTHER_SETTLED_TOPIC].

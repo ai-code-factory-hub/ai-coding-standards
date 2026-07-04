@@ -1,0 +1,50 @@
+# [PROJECT_NAME] — Definition of Done (per-slice PR checklist)
+
+<!--
+HOW TO USE: Copy to the repo root as `DEFINITION-OF-DONE.md`. Paste the checklist into every PR
+description and tick each box before requesting review. A slice is NOT done until every applicable
+box is checked. The NFR rows point at the Acceptance checklist inside each `../standards-kb/`
+domain — open the domain and satisfy its checklist, don't just tick from memory. Delete rows for
+NFR domains a given slice genuinely doesn't touch, and say why in the PR.
+-->
+
+> A slice = **one module or one screen**. It is done when every applicable box below is checked.
+> The `../standards-kb/` domain links each carry their own **Acceptance checklist** —
+> satisfy it, then tick. The final gate is the **99 Master Release Gate**.
+
+**Slice:** [MODULE_OR_SCREEN] · **PR:** [#NNN] · **Author:** [AI/owner] · **Date:** [YYYY-MM-DD]
+
+## Core (every slice)
+- [ ] Scope matches one module/screen; spec + plan linked.
+- [ ] Follows `../CLAUDE.md` (stack, conventions, multi-tenancy rules).
+- [ ] Reversible defaults logged in `DECISIONS.md` → Assumptions; new forks recorded as ADRs.
+- [ ] UI (if any) uses `../design-system-kb/` tokens — no hardcoded colors/spacing/type.
+
+## NFR acceptance — satisfy each domain's Acceptance checklist, then tick
+| ✓ | Domain (open it, meet its Acceptance checklist) | Applies to this slice? |
+|---|---|---|
+| [ ] | [01 Architecture & Multi-Tenancy](../standards-kb/01-architecture-multitenancy.md) — tenant scope on every table/query/log | [yes/N-A] |
+| [ ] | [02 Versioning, Deploy & Migration](../standards-kb/02-versioning-deploy-migration.md) — reversible migration (expand→migrate→contract) | [yes/N-A] |
+| [ ] | [03 Performance & Scalability](../standards-kb/03-performance-scalability.md) — budgets met, pagination, no N+1 | [yes/N-A] |
+| [ ] | [04 Security](../standards-kb/04-security.md) — authZ, no IDOR, secrets, audit trail | [yes/N-A] |
+| [ ] | [05 Reliability & Resilience](../standards-kb/05-reliability-resilience.md) — timeouts/retries, graceful degrade | [yes/N-A] |
+| [ ] | [06 Data Management](../standards-kb/06-data-management.md) — schema hygiene, retention, backups | [yes/N-A] |
+| [ ] | [07 Observability & AIOps](../standards-kb/07-observability-aiops.md) — structured logs, metrics, correlation id | [yes/N-A] |
+| [ ] | [08 Testing & QA](../standards-kb/08-testing-qa.md) — unit/contract/E2E + tenant-isolation test | [yes/N-A] |
+| [ ] | [09 Compliance & Privacy](../standards-kb/09-compliance-privacy.md) — consent, data-subject rights | [yes/N-A] |
+| [ ] | [10 API & Integration](../standards-kb/10-api-integration.md) — versioned, error envelope, idempotency | [yes/N-A] |
+| [ ] | [11 Frontend, UX & Product](../standards-kb/11-frontend-ux.md) — responsive, states, empty/error/loading | [yes/N-A] |
+| [ ] | [12 DevOps & CI/CD](../standards-kb/12-devops-cicd.md) — pipeline green, gated | [yes/N-A] |
+| [ ] | [13 i18n & Accessibility](../standards-kb/13-i18n-accessibility.md) — no hardcoded strings, WCAG 2.2 AA | [yes/N-A] |
+| [ ] | [14 Developer Experience & Docs](../standards-kb/14-devex-documentation.md) — ADR/runbook/README updated | [yes/N-A] |
+| [ ] | [15 AI / LLM Governance & Safety](../standards-kb/15-ai-llm-governance.md) — grounding, human-in-loop, cost caps | [yes/N-A] |
+| [ ] | [16 FinOps & Cloud Cost](../standards-kb/16-finops-cost.md) — tagging, cost guardrails | [yes/N-A] |
+| [ ] | [17 NFR Coverage & Gaps](../standards-kb/17-nfr-coverage-gaps.md) — portability/supportability targets | [yes/N-A] |
+| [ ] | [18 Theming & Branding](../standards-kb/18-theming-branding.md) — semantic tokens, no primitive leakage | [yes/N-A] |
+| [ ] | [19 NFR Implementation Playbook](../standards-kb/19-nfr-implementation-playbook.md) — Build/Automate/Done-when wired in CI | [yes/N-A] |
+
+## Release gate (before merge to a shippable branch)
+- [ ] **[99 Master Release Gate](../standards-kb/99-master-release-gate.md)** Go/No-Go checklist passes (or a logged, approved waiver).
+
+## Reviewer sign-off
+- [ ] Owner reviewed the git diff and approves.

@@ -1,0 +1,40 @@
+# [PROJECT_NAME] — Decisions Log (ADRs)
+
+<!--
+HOW TO USE: Copy to the repo root as `DECISIONS.md`. APPEND-ONLY. Every fork you hit is decided
+ONCE and recorded here so it is never re-asked. Add new ADRs to the top of the ADR list. Promote
+real product gaps into "Open questions". Log defaults the AI took under "Assumptions".
+For a full standalone record use `ADR.template`.
+-->
+
+> Append-only. Every fork we hit is decided **once** and recorded here so it is never re-asked.
+> Format: ID · Date · Decision · Why · Status. "Assumptions" at the bottom are defaults the AI
+> chose while building autonomously — the owner can override any of them by editing this file.
+
+---
+
+## ADR-[NNN] — [SHORT_TITLE]
+- **Date:** [YYYY-MM-DD]
+- **Decision:** [What was decided, concretely.]
+- **Why:** [The reasoning / trade-off / which KB or standards-kb rule drove it.]
+- **Status:** [PROPOSED | ACCEPTED | LOCKED | SUPERSEDED by ADR-NNN]
+
+<!-- Copy the block above for each new decision. Newest at the top of this list. -->
+
+---
+
+## Open questions (need a human decision before their slice is built)
+_The real product-level gaps from `knowledge-base/REQUIREMENTS-DIGEST-AND-GAPS.md` Part D — decide
+each before building the module that needs it, not before then._
+
+- [OPEN_QUESTION_1] — needed for [MODULE_OR_SLICE].
+- [OPEN_QUESTION_2] — needed for [MODULE_OR_SLICE].
+- [(others tracked in the gap doc, promoted here as each module comes up)]
+
+## Assumptions (defaults taken while building — override by editing)
+_Defaults the AI picked to keep moving on unspecified, reversible choices. Each is safe to change._
+
+| # | Date | Assumption taken | For (slice/module) | Revisit? |
+|---|---|---|---|---|
+| [A-01] | [YYYY-MM-DD] | [e.g. used [LIBRARY] for [PURPOSE]] | [MODULE] | [yes/no] |
+| _none yet_ | | | | |

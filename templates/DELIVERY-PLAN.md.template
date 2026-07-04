@@ -1,0 +1,88 @@
+# [PROJECT_NAME] — Delivery Plan & Build Roadmap
+
+<!--
+HOW TO USE: Copy to the repo root as `DELIVERY-PLAN.md`. Turns the requirements in `knowledge-base/`
+into working software, one slice at a time. Fill in each [BRACKET]. Add or remove phase blocks to
+match your project. Effort figures are planning estimates, refined per slice.
+-->
+
+> The plan we execute against. Stack and process are locked in [CLAUDE.md](CLAUDE.md); decisions in [DECISIONS.md](DECISIONS.md).
+> Compiled [YYYY-MM-DD]. Effort figures are planning estimates, refined per slice.
+
+- **Stack:** [ONE_LINE_STACK_SUMMARY]
+- **Tenancy:** [TENANCY_MODEL]
+- **Scope:** [N] modules · [N] phases · 20 NFR domains
+- **Autonomy:** build-and-review — the AI builds each slice, logs assumptions, the owner reviews git diffs
+
+---
+
+## The operating loop (every slice)
+The unit of work is **one module or one screen — never "the app."** Each slice runs:
+
+**1 Decide** (`DECISIONS.md`) → **2 Spec** → **3 Plan** → **4 Build** → **5 Verify** → **6 Review** (`DEFINITION-OF-DONE.md` + owner git-diff sign-off)
+
+---
+
+## The phases
+
+### Phase [N] · [PHASE_NAME] — ~[X–Y sessions] · ~[X weeks]
+- **Goal:** [The one-sentence outcome this phase must deliver.]
+- **Modules:** [M?, M?, M? — the modules built this phase]
+- **Deliverables:** [Concrete artifacts: screens, schemas, integrations, engines.]
+- **NFR domains locked:** [e.g. 01 Multi-tenancy · 04 Security · 12 DevOps/CI — the `../standards-kb/` domains first engineered here]
+
+<!-- Copy the block above for each phase. -->
+
+---
+
+## Module → phase coverage
+_Every module maps to exactly one "first built" phase._
+
+| Phase | Modules |
+|---|---|
+| **P[0] [NAME]** | [M?, M?] |
+| **P[1] [NAME]** | [M?, M?, M?] |
+| **P[2] [NAME]** | [M?, M?] |
+| [... one row per phase ...] | [...] |
+
+## NFR domains (all 20) → first phase engineered
+_Every `../standards-kb/` domain must land in some phase; 99 runs on every ship._
+
+| # | Domain | Lands |
+|---|---|---|
+| 01 | Architecture & Multi-Tenancy | [P?] |
+| 02 | Versioning, Deploy & Migration | [P?] |
+| 03 | Performance & Scalability | [P?] |
+| 04 | Security | [P?] |
+| 05 | Reliability & Resilience | [P?] |
+| 06 | Data Management | [P?] |
+| 07 | Observability & AIOps | [P?] |
+| 08 | Testing & QA | [P?] |
+| 09 | Compliance & Privacy | [P?] |
+| 10 | API & Integration | [P?] |
+| 11 | Frontend, UX & Product | [P?] |
+| 12 | DevOps & CI/CD | [P?] |
+| 13 | Internationalization & Accessibility | [P?] |
+| 14 | Developer Experience & Docs | [P?] |
+| 15 | AI / LLM Governance & Safety | [P?] |
+| 16 | FinOps & Cloud Cost | [P?] |
+| 17 | NFR Coverage & Gaps | [P?] |
+| 18 | Theming & Branding | [P?] |
+| 19 | NFR Implementation Playbook | [P? (continuous)] |
+| 99 | Master Release Gate | every ship |
+
+---
+
+## Timeline — the honest read
+- **Build velocity (what the AI controls):** ~[N] working slice(s) per session. [CORE_MVP_PHASES] ≈ **[X–Y weeks]**. Full product ≈ **~[N] build sessions**.
+- **Calendar (what the AI does *not* control):** ① [review cadence] · ② [open product decisions] · ③ [external credentials / integration access].
+- **Realistic full v1:** ~[X–Y months] calendar with timely reviews, decisions, and integration access.
+
+---
+
+## Next action
+1. [FIRST_SETUP_STEP — e.g. run toolchain bootstrap]
+2. [SECOND_STEP — e.g. "toolchain ready, scaffold the repo"]
+3. [THIRD_STEP — build first phase/module autonomously → hand owner a git diff to review]
+
+**Decision(s) needed before [FIRST_MODULE] finishes:** [OPEN_DECISION]. Tracked in `DECISIONS.md` → Open Questions.
