@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Groundwork — make AI vibe-coding build enterprise-grade software, in any tool" width="100%">
+</p>
+
 # Groundwork
 
 **An enterprise-grade knowledge base + agent library that makes AI "vibe coding" produce production-ready software — in any AI coding tool.**

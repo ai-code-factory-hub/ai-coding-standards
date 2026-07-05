@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1280 380" width="1280" height="380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Groundwork — enterprise-grade AI coding, in any tool">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e1a"/>
+      <stop offset="0.55" stop-color="#0e1430"/>
+      <stop offset="1" stop-color="#171a3a"/>
+    </linearGradient>
+    <radialGradient id="glowIndigo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4f46e5" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#4f46e5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTeal" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#06b6d4" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="node" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#c7d2fe" stop-opacity="1"/>
+      <stop offset="0.35" stop-color="#818cf8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#818cf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#e0e7ff"/>
+      <stop offset="0.5" stop-color="#a5b4fc"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="380" fill="url(#bg)"/>
+  <ellipse cx="250" cy="150" rx="560" ry="380" fill="url(#glowIndigo)" opacity="0.55"/>
+  <ellipse cx="1060" cy="180" rx="400" ry="320" fill="url(#glowViolet)" opacity="0.5"/>
+  <ellipse cx="1200" cy="340" rx="240" ry="200" fill="url(#glowTeal)" opacity="0.4"/>
+
+  <!-- constellation (agents / standards network) -->
+  <g stroke="#6366f1" stroke-opacity="0.28" stroke-width="1">
+    <line x1="900" y1="86"  x2="1002" y2="66"/>
+    <line x1="1002" y1="66" x2="1082" y2="118"/>
+    <line x1="1082" y1="118" x2="1162" y2="86"/>
+    <line x1="900" y1="86"  x2="952" y2="168"/>
+    <line x1="952" y1="168" x2="1052" y2="202"/>
+    <line x1="1052" y1="202" x2="1082" y2="118"/>
+    <line x1="1052" y1="202" x2="1150" y2="180"/>
+    <line x1="1150" y1="180" x2="1162" y2="86"/>
+    <line x1="1052" y1="202" x2="1012" y2="300"/>
+    <line x1="1012" y1="300" x2="1112" y2="288"/>
+    <line x1="1112" y1="288" x2="1184" y2="248"/>
+    <line x1="905" y1="262" x2="952" y2="168"/>
+    <line x1="905" y1="262" x2="1012" y2="300"/>
+    <line x1="1052" y1="202" x2="1112" y2="288"/>
+  </g>
+  <g fill="#818cf8">
+    <circle cx="1002" cy="66" r="3"/>
+    <circle cx="1162" cy="86" r="3"/>
+    <circle cx="952" cy="168" r="3"/>
+    <circle cx="1150" cy="180" r="4"/>
+    <circle cx="905" cy="262" r="3"/>
+    <circle cx="1112" cy="288" r="4"/>
+    <circle cx="1184" cy="248" r="3"/>
+  </g>
+  <!-- glowing hub nodes -->
+  <circle cx="1052" cy="202" r="22" fill="url(#node)"/>
+  <circle cx="1052" cy="202" r="5.5" fill="#e0e7ff"/>
+  <circle cx="1082" cy="118" r="16" fill="url(#node)"/>
+  <circle cx="1082" cy="118" r="4" fill="#e0e7ff"/>
+  <circle cx="900"  cy="86"  r="14" fill="url(#node)"/>
+  <circle cx="900"  cy="86"  r="3.5" fill="#e0e7ff"/>
+  <circle cx="1012" cy="300" r="14" fill="url(#node)"/>
+  <circle cx="1012" cy="300" r="3.5" fill="#e0e7ff"/>
+
+  <!-- wordmark -->
+  <text x="78" y="176" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="86" font-weight="800" letter-spacing="1.5" fill="url(#title)">GROUNDWORK</text>
+  <rect x="82" y="196" width="176" height="6" rx="3" fill="url(#accent)"/>
+
+  <!-- tagline -->
+  <text x="84" y="244" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#dbe1f5">Make AI vibe-coding build enterprise-grade software — in any tool.</text>
+
+  <!-- stats -->
+  <text x="84" y="284" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" letter-spacing="1.5" fill="#8b93b8">20 NFR DOMAINS &#160;·&#160; 15 FEATURE BLUEPRINTS &#160;·&#160; 19 EXPERT AGENTS &#160;·&#160; OpenAPI + MCP</text>
+
+  <!-- tools -->
+  <text x="84" y="332" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="500" fill="#94a0c8"><tspan fill="#6b74a0">Works in&#160;&#160;</tspan><tspan fill="#a5b4fc" font-weight="700">Claude Code</tspan> · <tspan fill="#a5b4fc" font-weight="700">Cursor</tspan> · <tspan fill="#a5b4fc" font-weight="700">Copilot</tspan> · <tspan fill="#a5b4fc" font-weight="700">Windsurf</tspan> · <tspan fill="#a5b4fc" font-weight="700">Cline</tspan></text>
+
+  <!-- MIT tag -->
+  <g transform="translate(1150,28)">
+    <rect x="0" y="0" width="82" height="26" rx="13" fill="#1e2547" stroke="#3a4270" stroke-width="1"/>
+    <text x="41" y="18" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1" fill="#a5b4fc">MIT</text>
+  </g>
+</svg>
