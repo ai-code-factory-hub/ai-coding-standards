@@ -53,6 +53,7 @@ Claude Code · Cursor · GitHub Copilot · Windsurf · Cline / Roo Code · and a
 
 Every folder is independent. A small internal tool doesn't need `compliance-kb/` or `mcp-kb/`; a fintech app does. See [TUTORIAL.md](TUTORIAL.md) §5 for the enable/disable decision table.
 
-## License & provenance
+## License
 
-> ⚠️ **Before making this repository public, confirm you have the right to open-source its contents.** The standards were generalized from an internal engineering handbook and `design-system-kb/` may include organization-specific design tokens. Consider a private repo, or removing organization-specific skins, until licensing is settled. Choose and add a `LICENSE` file before publishing.
+Released under the **[MIT License](LICENSE)** — © 2026 AI Code Factory Hub.
+Free to use, copy, modify, and distribute, including commercially. No warranty.
