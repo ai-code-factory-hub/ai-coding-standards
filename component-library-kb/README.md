@@ -61,6 +61,11 @@ Purpose: a **project-agnostic component catalog** for the enterprise starter kit
 | DataTablePage pattern | Layout & patterns | [`05-layout-and-patterns.md`](05-layout-and-patterns.md) |
 | DetailPage pattern | Layout & patterns | [`05-layout-and-patterns.md`](05-layout-and-patterns.md) |
 | Dashboard grid | Layout & patterns | [`05-layout-and-patterns.md`](05-layout-and-patterns.md) |
+| **AppShell + Sidebar + Workspace switcher + Profile menu** (runtime recipe) | App shell & dashboard | [`06-app-shell-and-dashboard.md`](06-app-shell-and-dashboard.md) |
+| **Theme picker (dropdown preview cards) + full-token `[data-theme]` runtime** | App shell & dashboard | [`06-app-shell-and-dashboard.md`](06-app-shell-and-dashboard.md) |
+| **KPI card · AI insight card · SVG line/bar/control charts · Dashboard composition** | App shell & dashboard | [`06-app-shell-and-dashboard.md`](06-app-shell-and-dashboard.md) |
+
+> `06-app-shell-and-dashboard.md` is the **copy-paste runtime reference** (theme dropdown, shell, charts) — start there when scaffolding the app frame, then port to React/Tailwind.
 
 ## Shared rules (apply to every component)
 

@@ -62,7 +62,7 @@ system default ──► tenant branding (may lock) ──► user preference (w
 |---|---|---|---|---|---|---|
 | 1 | **Indigo** ★ default | Brand default | `#4F46E5` | `#818CF8` | Saffron `#EA580C` | The system default |
 | 2 | **Saffron** | Brand-forward, warm | `#EA580C` | `#FB923C` | Indigo `#4F46E5` | Accent/primary swapped |
-| 3 | **Clinical Teal** | Calm, medical | `#0D9488` | `#2DD4BF` | Saffron | Popular for diagnostics |
+| 3 | **Teal** | Calm, professional | `#0D9488` | `#2DD4BF` | Saffron | Popular for dashboards |
 | 4 | **Medical Blue** | Trust, classic | `#2563EB` | `#60A5FA` | Saffron | Info-blue stays distinct (blue-500) |
 | 5 | **Emerald Care** | Fresh, wellness | `#059669` | `#34D399` | Saffron | Success stays emerald + icon (avoid clash) |
 | 6 | **Ocean Cyan** | Cool, modern | `#0891B2` | `#22D3EE` | Saffron | — |
@@ -78,3 +78,9 @@ system default ──► tenant branding (may lock) ──► user preference (w
 | 16 | **Colorblind-Safe** ♿ | Okabe-Ito palette | `#0072B2` (blue) | `#56B4E9` | `#E69F00` (orange) | Semantic: success `#009E73`, danger `#D55E00`, warning `#F0E442` (dark text), info `#56B4E9`; always icon+label |
 
 This catalog satisfies the ≥12 / high-contrast / colorblind-safe requirements above (Indigo ships 16). Cross-check the [MUST] rules in [`../standards-kb/18-theming-branding.md`](../standards-kb/18-theming-branding.md).
+
+## Runtime pattern: full-token `[data-theme]` + a preview-card picker
+
+A theme is a **full token override**, not just a brand swap: the default palette lives on `:root`, and each theme is a `[data-theme="id"]` block overriding the tokens it changes (brand-only themes override the accent ramp; tinted themes also override grounds; dark themes override everything incl. semantic `-bg` tints). Switching a theme = setting **one attribute** on `<html>`; persist the choice per user and restore it before paint (no flash). Present the catalog as a **dropdown of preview cards** (mini swatch + name + description + selected state) — **not a bare swatch row** — and always include **System** (follow OS), **High Contrast (AAA)**, and **Colorblind-Safe (Okabe–Ito)**.
+
+The complete copy-paste runtime — `THEMES` array, `applyTheme()`, `renderThemeMenu()`, the theme-menu markup/CSS, plus the app shell, KPI/AI cards, and token-driven SVG charts — is in [`../component-library-kb/06-app-shell-and-dashboard.md`](../component-library-kb/06-app-shell-and-dashboard.md).
